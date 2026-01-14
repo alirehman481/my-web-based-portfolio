@@ -1,3 +1,4 @@
+indehtml
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +87,7 @@
 </body>
 </html>    
 
-
+style.css
 /* Reset */
 * {
     margin: 0;
@@ -317,7 +318,7 @@ form button:hover {
     box-shadow: 0 0 20px #ff00ff, 0 0 40px #00f2ff;
 }
 
-
+script.js
 // Profile 3D tilt
 const profile = document.querySelector(".profile");
 document.addEventListener("mousemove", (e) => {
