@@ -1,5 +1,5 @@
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -226,4 +226,107 @@ form button:hover {
     background: #ff00ff;
     color: #fff;
     box-shadow: 0 0 20px #ff00ff, 0 0 40px #00f2ff;
+}
+
+/* ============================= */
+/* RESPONSIVE FIX (Same UI Scale) */
+/* ============================= */
+
+/* Universal scaling */
+html {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+/* Hero responsiveness */
+.hero {
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* Profile image scaling */
+.profile {
+    width: clamp(220px, 30vw, 280px);
+    height: clamp(280px, 40vw, 350px);
+}
+
+/* Sections padding scale */
+.section {
+    padding: clamp(70px, 10vw, 100px) clamp(5%, 8vw, 10%);
+}
+
+/* Navigation scaling */
+nav ul li a {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    padding: 12px;
+}
+
+/* Project logos scaling */
+.logo-item img {
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
+}
+
+/* Skills scaling */
+.skill {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+}
+
+/* Contact form width fix */
+form {
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* ============================= */
+/* MOBILE OPTIMIZATION */
+/* ============================= */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .project-logos {
+        gap: 20px;
+    }
+
+    .skills-grid {
+        gap: 15px;
+    }
+}
+
+/* ============================= */
+/* SMALL PHONES */
+/* ============================= */
+@media (max-width: 480px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+    }
 }
